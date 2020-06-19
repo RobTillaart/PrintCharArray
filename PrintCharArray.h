@@ -2,7 +2,7 @@
 //
 //    FILE: PrintCharArray.h
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.2.0
+// VERSION: 0.2.1
 // PURPOSE: Class that captures prints into a char array
 //    DATE: 2017-12-07
 //     URL: https://github.com/RobTillaart/PrintCharArray
@@ -10,11 +10,11 @@
 // 0.1.0    2017-12-07 initial version
 // 0.1.1    2020-04-28 minor optimization
 // 0.2.0    2020-04-30 dynamic memory
-//
+// 0.2.1    2020-06-19 fix library.json
 
 #include "Print.h"
 
-#define PRINTCHARARRAY_VERSION "0.2.0"
+#define PRINTCHARARRAY_VERSION "0.2.1"
 
 class PrintCharArray: public Print
 {
