@@ -8,6 +8,7 @@ write	KEYWORD2
 clear	KEYWORD2
 free	KEYWORD2
 size	KEYWORD2
+maxSize	KEYWORD2
 getBuffer	KEYWORD2
 
 # Constants (LITERAL1)
