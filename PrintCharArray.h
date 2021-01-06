@@ -31,6 +31,11 @@ public:
     _buffer = (char *) malloc(_bufSize);
   };
 
+  ~PrintCharArray()
+  {
+    if (_buffer) free(_buffer);
+  };
+
   size_t write(uint8_t c)
   {
     if (_index < _bufSize - 1)
