@@ -56,25 +56,23 @@ unittest(test_constructor)
 
   PrintCharArray ps(100);
 
-  asssertEqual(100, ps.bufSize());
-  asssertEqual(100, ps.free());
-  asssertEqual(0, ps.size());
+  assertEqual(100, ps.bufSize());
+  assertEqual(100, ps.free());
+  assertEqual(0, ps.size());
 
   ps.print("Hello World");
   fprintf(stderr, "%s\n", ps.getBuffer());
-  asssertEqual(89, ps.free());
-  asssertEqual(11, ps.size());
+  assertEqual(89, ps.free());
+  assertEqual(11, ps.size());
 
   ps.print(" and moon");
   fprintf(stderr, "%s\n", ps.getBuffer());
-  asssertEqual(80, ps.free());
-  asssertEqual(20, ps.size());
+  assertEqual(80, ps.free());
+  assertEqual(20, ps.size());
 
   ps.clear();
-  asssertEqual(100, ps.free());
-  asssertEqual(0, ps.size());
-
-  assertEqual(1, 1);
+  assertEqual(100, ps.free());
+  assertEqual(0, ps.size());
 }
 
 unittest_main()
