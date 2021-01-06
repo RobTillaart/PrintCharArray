@@ -40,7 +40,6 @@
 #include "PrintCharArray.h"
 
 
-
 unittest_setup()
 {
 }
@@ -57,22 +56,22 @@ unittest(test_constructor)
   PrintCharArray ps(100);
 
   assertEqual(100, ps.bufSize());
-  assertEqual(100, ps.free());
-  assertEqual(0, ps.size());
+  assertEqual(100, ps.available());
+  assertEqual(0,   ps.size());
 
   ps.print("Hello World");
   fprintf(stderr, "%s\n", ps.getBuffer());
-  assertEqual(89, ps.free());
+  assertEqual(89, ps.available());
   assertEqual(11, ps.size());
 
   ps.print(" and moon");
   fprintf(stderr, "%s\n", ps.getBuffer());
-  assertEqual(80, ps.free());
+  assertEqual(80, ps.available());
   assertEqual(20, ps.size());
 
   ps.clear();
-  assertEqual(100, ps.free());
-  assertEqual(0, ps.size());
+  assertEqual(100, ps.available());
+  assertEqual(0,   ps.size());
 }
 
 unittest_main()

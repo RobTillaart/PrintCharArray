@@ -2,7 +2,7 @@
 //
 //    FILE: PrintCharArray.h
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.2.2
+// VERSION: 0.3.0
 // PURPOSE: Class that captures prints into a char array
 //    DATE: 2017-12-07
 //     URL: https://github.com/RobTillaart/PrintCharArray
@@ -11,13 +11,13 @@
 //  0.1.1   2020-04-28  minor optimization
 //  0.2.0   2020-04-30  dynamic memory
 //  0.2.1   2020-06-19  fix library.json
-//  0.2.2   2021-01-06  Arduino-CI + unit test
+//  0.3.0   2021-01-06  Arduino-CI + unit test, free -> available()
 
 
 #include "Print.h"
 
 
-#define PRINTCHARARRAY_VERSION            (F("0.2.2"))
+#define PRINTCHARARRAY_VERSION            (F("0.3.0"))
 
 #define PRINTCHARARRAY_MAX_BUFFER_SIZE    250
 
@@ -51,7 +51,7 @@ public:
     _index = 0;
   }
 
-  int free()
+  int available()
   { 
     return (_bufSize - _index);
   }

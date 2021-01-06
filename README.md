@@ -1,7 +1,7 @@
 
-[![Arduino CI](https://github.com/RobTillaart/<REPO>/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/<REPO>/blob/master/LICENSE)
-[![GitHub release](https://img.shields.io/github/release/RobTillaart/<REPO>.svg?maxAge=3600)](https://github.com/RobTillaart/<REPO>/releases)
+[![Arduino CI](https://github.com/RobTillaart/PrintCharArray/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/PrintCharArray/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/RobTillaart/PrintCharArray.svg?maxAge=3600)](https://github.com/RobTillaart/PrintCharArray/releases)
 
 
 # PrintCharArray
@@ -29,7 +29,8 @@ Applications
 - **PrintCharArray(uint8_t size = 100)** constructor
 - **size_t write(uint8_t c)** workhorse of Print interface.
 - **void clear()** wipes the internal buffer
-- **int free()** shows how much free space is left in the internal buffer
+- **int available()** shows how much space is left in the internal buffer.
+Replaces free().
 - **int size()** current usage of the buffer
 - **int bufSize()** size of the whole buffer. recall that a char array must have a '\0' delimiter.
 - **char \* getBuffer()** to access the buffer.
