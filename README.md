@@ -29,6 +29,23 @@ Applications
   - use to prevent "display line overflow" (e.g. floats).
   - use to right align output (see examples).
 
+#### Template class 
+
+Since 0.4.0 the library has a template class too - Thanks to me21.
+See also issue #7.
+
+This template class is called PrintCharArrayT for now.
+
+The interface and functionality is similar (except constructor).
+Performance is similar, footprint is smaller on AVR (no malloc lib).
+
+```
+printCharArray4.ino = 3532 bytes. global var use 422 bytes.
+printCharArray4_template.ino = 2840 bytes. global var use 627 bytes.
+```
+
+This template version needs more testing, so labelled **experimental** for now.
+
 
 #### Related
 
@@ -55,6 +72,13 @@ Recall that a char array must have a '\0' delimiter.
 - **char \* getBuffer()** to access the buffer.
 
 
+## Interface template version
+
+- **PrintCharArrayT<int BUFSIZE>** constructor, no default size.
+
+Remaining interface is identical.
+
+
 ## Operation
 
 See examples.
@@ -68,21 +92,25 @@ See examples.
 
 #### Should
 
-- move code to .cpp file
 - testing
+  - platforms
+  - template version
 
 #### Could
 
 - examples
   - inject spaces in "middle align" example? possible?
-  - rename some
+  - rename size() => length()
+  - rename bufSize() => size() ? ambiguous renaming.
   - add real live examples.
-- add functions like **repeat(char c)** to inject e.g. 7 spaces etc.
+- **size_t repeat(uint8_t length, uint8_t c)** convenience function for alignment.
 - add error flag
-- PRINTCHARARRAY_LIB_VERSION
 
 
 #### Wont
+
+- move code to .cpp file
+
 
 ## Support
 
