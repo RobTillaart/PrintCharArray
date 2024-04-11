@@ -38,6 +38,7 @@ This template class is called PrintCharArrayT for now.
 
 The interface and functionality is similar (except constructor).
 Performance is similar, footprint is smaller on AVR (no malloc lib).
+The space needed will not be dynamically allocated (stack iso heap).
 
 ```
 printCharArray4.ino = 3532 bytes. global var use 422 bytes.
@@ -49,9 +50,9 @@ This template version needs more testing, so labelled **experimental** for now.
 
 #### Related
 
-- https://github.com/RobTillaart/PrintCharArray (captures data in a char buffer)
-- https://github.com/RobTillaart/PrintSize (counts length of a number of print commands)
-- https://github.com/RobTillaart/PrintString (captures data in a String)
+- https://github.com/RobTillaart/PrintCharArray captures data in a char array buffer.
+- https://github.com/RobTillaart/PrintSize counts length of a number of print commands.
+- https://github.com/RobTillaart/PrintString captures data in a String.
 
 
 ## Interface
